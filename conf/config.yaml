@@ -1,0 +1,27 @@
+paths:
+  gtfs_dir: data/raw/gtfs
+  ridership: data/raw/ridership/ridership.csv
+  weather: data/raw/weather/weather.csv
+  events: data/raw/events/events.csv
+  processed_ridership: data/processed/ridership.parquet
+  features: data/processed/features.parquet
+  forecasts: data/processed/forecasts.parquet
+  metrics_json: data/processed/metrics.json
+  simulation: data/processed/simulation.parquet
+  optimization: data/processed/optimization.parquet
+  capacity: data/processed/capacity.parquet
+  report: reports/summary.html
+models_dir: models
+modeling:
+  model: arima
+  params:
+    window: 24
+  vehicle_capacity: 80
+  fares: {}
+simulation:
+  fare: 2.0
+  price_elasticity: 0.1
+  time_elasticity: 0.05
+optimization:
+  revenue_tolerance: 0.0
+  min_service_factor: 0.8
